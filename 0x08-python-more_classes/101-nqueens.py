@@ -54,7 +54,7 @@ def Queen(m_queen, nqueen):
 
     m_queen[nqueen] = -1
 
-    while((m_queen[nqueen] < len(m_queen) - 1)):
+    while m_queen[nqueen] < len(m_queen) - 1:
 
         m_queen[nqueen] += 1
 
@@ -84,13 +84,13 @@ if __name__ == '__main__':
         sys.exit(1)
 
     try:
-        size = int(sys.argv[1])
+        SIZE = int(sys.argv[1])
     except Exception:
         print("N must be a number")
         sys.exit(1)
 
-    if size < 4:
+    if SIZE < 4:
         print("N must be at least 4")
         sys.exit(1)
 
-    solveNQueen(size)
+    solveNQueen(SIZE)
